@@ -1,21 +1,28 @@
 class A {
     int i;
-    private int j;
-
+    int j;
+    A() {
+        System.out.println("Inside A's constructor.");
+    }
     void setij(int x, int y) {
         i = x;
         j = y;
     }
-
-    int getj() {
-        return j;
+    void showij() {
+        System.out.println("i and j: " + i + " " + j);
     }
 }
 class B extends A {
-    int total;
+    int k;
+    B() {
+        System.out.println("Inside B's constructor.");
+    }
+    void showk() {
+        System.out.println("k: " + k);
+    }
 
     void sum() {
-        total = i + getj();
+        System.out.println("i+j+k: " + (i+j+k));
     }
 }
 class Access {
@@ -24,6 +31,6 @@ class Access {
 
         subOb.setij(10, 12);
         subOb.sum();
-        System.out.println("Total is " + subOb.total);
+        subOb.sum();;
     }
 }

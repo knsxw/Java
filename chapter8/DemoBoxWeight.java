@@ -29,13 +29,6 @@ class Box {
         return width * height * depth;
     }
 }
-class BoxWeight extends Box {
-    double weight;
-    BoxWeight(double w, double h, double d, double m) {
-        super(w,h,d);
-        weight = m;
-    }
-}
 class DemoBoxWeight {
     public static void main(String[] args) {
         BoxWeight mybox1 = new BoxWeight(10, 20, 15, 34.3);
